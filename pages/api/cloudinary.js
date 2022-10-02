@@ -19,7 +19,6 @@ export default async function handler(req, res) {
     const fileStr = req.body.data;
 
     if (req.method === 'POST') {
-        console.log(fileStr)
         try {
             const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
                 chunk_size: 6000000,
